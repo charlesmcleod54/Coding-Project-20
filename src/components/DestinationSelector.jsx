@@ -8,7 +8,9 @@ function DestinationSelector({ options, selected, onChange }) {
                 onChange={(e) => onChange(e.target.value)}
             >
                 {options.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
+                    <option key={opt} value={opt}>
+                        {opt === "All" ? "All Destinations" : opt}
+                    </option>
                 ))}
             </select>
         </div>
