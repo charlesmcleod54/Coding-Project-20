@@ -48,6 +48,15 @@ function App() {
         selected={selectedDestination}
         onChange={setSelectedDestination}
         />
+
+        {/* Task 4 */}
+        {tours.length === 0 && !loading && (
+          <div style={{ textAlign: "center", marginTop: "2rem" }}>
+            <p>No tours left. Refresh to reload.</p>
+            <button onClick={fetchTours}>Refresh</button>
+            </div>
+        )}
+        
         <Gallery
           tours={filteredTours}
           loading={loading}
