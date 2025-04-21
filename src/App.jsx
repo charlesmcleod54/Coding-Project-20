@@ -6,11 +6,12 @@ import { useEffect } from "react";
 const TOURS_API = "https://course-api.com/react-tours-project";
 
 function App() {
-  const [tours, setTours] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [tours, setTours] = useState([]); // Tours stored in useState
+  const [loading, setLoading] = useState(true); // Loading State
+  const [error, setError] = useState(null); // Error State
   const [selectedDestination, setSelectedDestination] = useState("All");
 
+  // Fetch and useEffect
   useEffect(() => {
     const fetchTours = async () => {
       setLoading(true);
